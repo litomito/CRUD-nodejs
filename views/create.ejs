@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="stylesheet" href="../public/style/create.css">
+</head>
+<body>
+    <h1>Add Users</h1>
+        <form action="/users" method="POST" enctype="multipart/form-data">
+            <input type="text" placeholder="First Name" name="firstname" required>
+            <input type="text" placeholder="Last Name" name="lastname" required>
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="date" name="dateofbirth" required>
+            <label for="file">Chose image</label>
+            <input type="file" id="file" name="image" accept="image/*" onchange="displayFileName(this)" required>
+            <span id="selected-file-text">No image chosen</span>
+            <input type="text" placeholder="profession" name="profession" required>
+            <button type="submit">Submit</button>
+        </form>
+
+    <script src="../public/js/create.js"></script>
+</body>
+</html>

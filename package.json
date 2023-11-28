@@ -1,0 +1,23 @@
+{
+  "name": "crud-nodejs",
+  "version": "1.0.0",
+  "description": "CRUD_site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --ignore 'db.json' server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "fs.promises": "^0.1.2",
+    "image-size": "^1.0.2",
+    "lowdb": "^1.0.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

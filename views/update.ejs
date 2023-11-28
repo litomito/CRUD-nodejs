@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="../public/style/update.css">
+</head>
+<body>
+    <h1>Update</h1>
+    <div class="container">
+        <div class="update">
+            <div class="form-card">
+                <form action="/users/update/<%= user.id %>" method="POST" enctype="multipart/form-data">
+                    <input type="text" placeholder="First Name" name="firstname" value="<%= firstname %>" required>
+                    <input type="text" placeholder="Last Name" name="lastname" value="<%= lastname %>" required>
+                    <input type="text" placeholder="Username" name="username" value="<%= username %>" required>
+                    <input type="date" name="dateofbirth" value="<%= dateofbirth %>" required>
+                    <label for="file">Chose image</label>
+                    <input type="file" id="file" name="image" accept="image/*" value="<%= user.image %>" onchange="displayFileName(this)" required>
+                    <span id="selected-file-text">No image chosen</span>
+                    <input type="text" placeholder="profession" name="profession" value="<%= profession %>" required>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+        <div class="card">
+            <a href="/read" id="user">
+                <div class="image">
+                    <img src="<%= user.image %>" alt="users picture">
+                </div>
+                <div class="info">
+                    <div class="firstname">
+                        <p>
+                            <%= user.firstname %>
+                        </p>
+                    </div>
+                    <div class="lastname">
+                        <p>
+                            <%= user.lastname %>
+                        </p>
+                    </div>
+                    <div class="username">
+                        <p>
+                            <%= user.username %>
+                        </p>
+                    </div>
+                    <div class="dob">
+                        <p>
+                            <%= user.dateofbirth %>
+                        </p>
+                    </div>
+            
+                    <div class="prof">
+                        <p>
+                            <%= user.profession %>
+                        </p>
+                    </div>
+                </div>    
+            </a>
+        </div>
+    </div>
+    <div class="del">
+        <button class="btn" data-user-id="<%= user.id %>">Delete User</button>
+    </div>
+    <script src="../public/js/update.js"></script>
+    <script>
+        const initialImageName = "<%= user.image %>";
+        displayFileName(document.getElementById("file"), initialImageName);
+    </script>
+</body>
+</html>

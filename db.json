@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Linus",
+      "lastname": "Toma",
+      "username": "lito",
+      "dateofbirth": "2023-11-15",
+      "image": "/img/1701161413604.webp",
+      "profession": "IT"
+    }
+  ]
+}
